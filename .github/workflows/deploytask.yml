@@ -13,4 +13,4 @@ jobs:       #job means a task or a set of tasks that are run as part of a workfl
               run: |
                 echo "clone the repo"
                 echo "${{toJson(github)}}"
-                git clone https://github.com/GuruFagare/github_action_practise.git
+                git clone https://github.com/${{github.repository}}.git
