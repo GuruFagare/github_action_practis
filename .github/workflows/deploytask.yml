@@ -1,0 +1,16 @@
+#create workflow file for deploytask
+name: deploytask #give name as suggested by user
+on:
+  push: 
+    branches:
+      - main
+  workflow_dispatch: #trigger on push and workflow_dispatch manually to show the workflow in actions tab or button
+jobs:       #job means a task or a set of tasks that are run as part of a workflow
+    deploytask: #give name as suggested by user
+        runs-on: ubuntu-latest
+        steps:
+            - name: "Checkout code" #give name as suggested by user
+              run: |
+                echo "clone the repo"
+                echo "${{github.repository}}"
+                git clone https://github.com/GuruFagare/github_action_practise.git
